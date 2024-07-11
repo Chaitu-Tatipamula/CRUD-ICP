@@ -1,0 +1,7 @@
+service : () -> {
+  create_todo : (text) -> (nat);
+  delete_todo : (nat) -> (Result);
+  get_latest_todos : () -> (vec Todo) query;
+  get_todos : () -> (vec Todo) query;
+  update_todo : (nat, opt text, opt bool) -> (Result);
+}

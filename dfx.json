@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "crud_backend": {
+      "candid": "src/crud_backend/crud_backend.did",
+      "wasm": "target/wasm32-unknown-unknown/release/crud_backend_opt.wasm",
+      "package": "crud_backend",
+      "type": "rust"
+    },
+    "crud_frontend": {
+      "dependencies": [
+        "crud_backend"
+      ],
+      "source": [
+        "src/crud_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "crud_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
