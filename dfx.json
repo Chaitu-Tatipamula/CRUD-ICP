@@ -3,6 +3,7 @@
     "crud_backend": {
       "candid": "src/crud_backend/crud_backend.did",
       "wasm": "target/wasm32-unknown-unknown/release/crud_backend_opt.wasm",
+      "build" : "cargo build --target wasm32-unknown-unknown --release",
       "package": "crud_backend",
       "type": "rust"
     },

@@ -1,7 +1,9 @@
+type Todo = record { id : nat; desc : text; completed : bool };
 service : () -> {
   create_todo : (text) -> (nat);
-  delete_todo : (nat) -> (Result);
+  delete_todo : (nat) -> (text);
   get_latest_todos : () -> (vec Todo) query;
+  get_paginated_todos : (nat64, nat64) -> (vec Todo) query;
   get_todos : () -> (vec Todo) query;
-  update_todo : (nat, opt text, opt bool) -> (Result);
+  update_todo : (nat, opt text, opt bool) -> (text);
 }
